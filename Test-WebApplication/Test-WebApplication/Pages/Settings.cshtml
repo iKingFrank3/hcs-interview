@@ -1,0 +1,22 @@
+@page
+@model SettingsModel
+@{
+    ViewData["Title"] = "Settings";
+}
+
+<br>
+        <div class="settings-content">
+            <div class="setting-item">
+                <label for="username">Username:</label>
+                <input type="text" id="username" class="line-input" placeholder="Enter new username">
+            </div>
+            <div class="setting-item">
+                <label for="password">Password:</label>
+                <input type="password" id="password" class="line-input" placeholder="Enter new password">
+            </div>
+            <div class="setting-buttons">
+                <button class="action-button" onclick="saveSettings()">Save Changes</button>
+                <br>
+                <button class="action-button" onclick="logout()">Logout</button>
+            </div>
+        </div>

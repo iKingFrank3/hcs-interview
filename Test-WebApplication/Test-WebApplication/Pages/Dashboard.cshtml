@@ -1,0 +1,27 @@
+@page
+@model DashboardModel
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<!-- Any specific content for the dashboard can go here -->
+<div class="actions">
+    <a href="/Inventory" class="action-item">
+        <i class="fas fa-warehouse fa-3x"></i>
+        <p>View Inventory</p>
+    </a>
+    <a href="/Upload" class="action-item">
+        <i class="fas fa-barcode fa-3x"></i>
+        <p>Upload Item</p>
+    </a>
+    <a href="/Export" class="action-item">
+        <i class="fas fa-file-export fa-3x"></i>
+        <p>Export Data</p>
+    </a>
+    <a href="/Settings" class="action-item">
+        <i class="fas fa-cog fa-3x"></i>
+        <p>Settings</p>
+    </a>
+</div>
+
+

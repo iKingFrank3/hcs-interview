@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Test_WebApplication</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/dashboard.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    @if (ViewData["HideLayout"] == null || !(bool)ViewData["HideLayout"])
+    {
+        <div class="dashboard-container">
+            <div class="header">
+                <a href="/Dashboard">
+                    <img src="~/images/iphone.png" alt="Italia Furniture Logo" class="logo">
+                </a>
+            </div>
+            <div class="store-info">
+                <div class="date-info">
+                    @if (ViewData["Title"] == "Dashboard")
+                    {
+                        <div class="info-details">
+                            <p><strong>Total Inventory Count:</strong> <span id="totalInventoryCount">0</span></p>
+                            <p><strong>Unique SKU:</strong> <span id="uniqueSKUCount">0</span></p>
+                        </div>
+                    }
+                    @if (ViewData["Title"] == "Inventory")
+                    {
+                        <h1>Inventory</h1>
+                        <div class="actions">
+                            <input type="date" id="datePicker" class="line-dropdown" placeholder="Select a date" onchange="fetchData()">
+                        </div>
+                        <div class="info-details">
+                            <p><strong>Total Inventory Count:</strong> <span id="totalInventoryCount">0</span></p>
+                            <p><strong>Unique SKU:</strong> <span id="uniqueSKUCount">0</span></p>
+                        </div>
+                    }
+                    @if (ViewData["Title"] == "Upload")
+                    {
+                        <h1>Upload Item</h1>
+                        <form id="locationForm">
+                            <input type="text" id="locationInput" name="location_code" class="line-dropdown" placeholder="Enter location code" oninput="handleLocationInput(event)">
+                            <button type="button" id="storeButton" class="action-button" onclick="storeLocation()">Store Code</button>
+                            <button type="button" id="editClearButton" class="action-button" onclick="editOrClear()">Clear</button>
+                        </form>
+                    }
+                    @if (ViewData["Title"] == "Export")
+                    {
+                        <h1>Export</h1>
+                        <div class="actions">
+                            <input type="date" id="datePicker" class="line-dropdown" placeholder="Select a date range" onchange="fetchData()">
+                        </div>
+                        <button class="action-button" onclick="exportToSpreadsheet()">Export to Spreadsheet</button>
+                    }
+                    @if (ViewData["Title"] == "Settings")
+                    {
+                        <h1>Settings</h1>
+                    }
+                </div>
+            </div>
+            <div class="container">
+                <main role="main" class="pb-3">
+                    @RenderBody()
+                </main>
+            </div>
+            <footer class="footer">
+                <p>&copy; 2023 Italia Furniture</p>
+            </footer>
+        </div>
+
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+        <script src="~/js/inventory.js" asp-append-version="true"></script>
+        <script src="~/js/upload.js" asp-append-version="true"></script>
+        <script src="~/js/export.js" asp-append-version="true"></script>
+
+        @RenderSection("Scripts", required: false)
+    }
+    else
+    {
+        // Ignore the body for this layout
+        @RenderBody() // This will not be called, so you can ignore it
+    }
+</body>
+</html>
+

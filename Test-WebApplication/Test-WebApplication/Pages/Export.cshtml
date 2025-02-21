@@ -1,0 +1,29 @@
+@page
+@model ExportModel
+@{
+    ViewData["Title"] = "Export";
+}
+
+<div class="item-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>SKU</th>
+                        <th>Quantity</th>
+                        <th>Date Added</th>
+                        <th>Location</th>
+                    </tr>
+                </thead>
+                <tbody id="exportTableBody">
+                    <!-- Filtered table rows will be dynamically added here -->
+                </tbody>
+            </table>
+        </div>
+        <div id="exportModal" class="modal">
+            <div class="modal-content">
+                <span class="close-button" onclick="closeModal()">&times;</span>
+                <h2>Export Options</h2>
+                <p>Select an option to export your data:</p>
+                <button class="action-button" onclick="downloadCSV()">Download as CSV</button>
+            </div>
+        </div>

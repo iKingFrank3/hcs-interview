@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "omO+o9RqzFM=",
+  "success": true,
+  "projectFilePath": "/Users/KingFrank/Desktop/test practice/Test-WebApplication/Test-WebApplication/Test-WebApplication.csproj",
+  "expectedPackageFiles": [
+    "/Users/KingFrank/.nuget/packages/microsoft.aspnetcore.app.ref/3.1.10/microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512"
+  ],
+  "logs": []
+}

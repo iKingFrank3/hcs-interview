@@ -1,0 +1,36 @@
+@page
+@model UploadModel
+@{
+    ViewData["Title"] = "Upload";
+}
+
+<div class="content-area">
+    <div class="actions">
+        <button class="action-button" onclick="showScannedItemBox()">Item In</button>
+        <button class="action-button" onclick="showItemOutBox()">Item Out</button>
+    </div>
+    <div id="scannedItemBox" class="scanned-item-box" style="display: none;">
+        <h3>Last Scanned SKU In:</h3>
+        <input type="text" id="skuInput" placeholder="Scan SKU" class="line-dropdown" onkeydown="handleSKUInput(event)">
+        <div id="skuInMessage" style="color: green; display: none;"></div>
+    </div>
+    <div id="itemOutBox" class="scanned-item-box" style="display: none;">
+        <h3>Last Scanned SKU Out:</h3>
+        <input type="text" id="skuOutInput" placeholder="Scan SKU Out" class="line-dropdown" onkeydown="handleSKUOutInput(event)">
+        <div id="skuOutMessage" style="color: green; display: none;"></div>
+    </div>
+    <table class="item-table">
+        <thead>
+            <tr>
+                <th>SKU</th>
+                <th>Quantity</th>
+                <th>Date Added</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Table rows will be dynamically added here -->
+        </tbody>
+    </table>
+</div>
+<script src="~/js/upload.js" asp-append-version="true"></script>
+

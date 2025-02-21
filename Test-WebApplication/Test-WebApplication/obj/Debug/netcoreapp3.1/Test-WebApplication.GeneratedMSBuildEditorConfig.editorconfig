@@ -1,0 +1,8 @@
+is_global = true
+build_property.RootNamespace = Test_WebApplication
+build_property.ProjectDir = /Users/KingFrank/Desktop/test practice/Test-WebApplication/Test-WebApplication/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.CsWinRTUseWindowsUIXamlProjections = false
+build_property.EffectiveAnalysisLevelStyle = 
+build_property.EnableCodeStyleSeverity = 

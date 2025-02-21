@@ -1,0 +1,22 @@
+@page
+@model InventoryModel
+@{
+    ViewData["Title"] = "Inventory";
+}
+
+<!-- Any specific content for the dashboard can go here -->
+<div class="item-table">
+    <table>
+        <thead>
+            <tr>
+                <th>SKU</th>
+                <th>Quantity</th>
+                <th>Date Added</th>
+                <th>Location</th>
+            </tr>
+        </thead>
+        <tbody id="exportTableBody">
+            <!-- Filtered table rows will be dynamically added here -->
+        </tbody>
+    </table>
+</div>

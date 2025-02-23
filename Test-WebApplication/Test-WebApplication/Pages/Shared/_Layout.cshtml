@@ -29,9 +29,6 @@
                     @if (ViewData["Title"] == "Inventory")
                     {
                         <h1>Inventory</h1>
-                        <div class="actions">
-                            <input type="date" id="datePicker" class="line-dropdown" placeholder="Select a date" onchange="fetchData()">
-                        </div>
                         <div class="info-details">
                             <p><strong>Total Inventory Count:</strong> <span id="totalInventoryCount">0</span></p>
                             <p><strong>Unique SKU:</strong> <span id="uniqueSKUCount">0</span></p>
@@ -49,9 +46,6 @@
                     @if (ViewData["Title"] == "Export")
                     {
                         <h1>Export</h1>
-                        <div class="actions">
-                            <input type="date" id="datePicker" class="line-dropdown" placeholder="Select a date range" onchange="fetchData()">
-                        </div>
                         <button class="action-button" onclick="exportToSpreadsheet()">Export to Spreadsheet</button>
                     }
                     @if (ViewData["Title"] == "Settings")
@@ -73,10 +67,8 @@
         <script src="~/lib/jquery/dist/jquery.min.js"></script>
         <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
         <script src="~/js/site.js" asp-append-version="true"></script>
-        <script src="~/js/inventory.js" asp-append-version="true"></script>
         <script src="~/js/upload.js" asp-append-version="true"></script>
         <script src="~/js/export.js" asp-append-version="true"></script>
-
         @RenderSection("Scripts", required: false)
     }
     else
@@ -86,4 +78,3 @@
     }
 </body>
 </html>
-

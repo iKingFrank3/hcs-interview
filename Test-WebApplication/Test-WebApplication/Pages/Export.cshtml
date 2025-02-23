@@ -4,26 +4,41 @@
     ViewData["Title"] = "Export";
 }
 
+<div class="actions">
+    <form method="get" action="/Export">
+        <input type="date" id="datePicker" name="selectedDate" class="line-dropdown" placeholder="Select a date" value="@Model.SelectedDate?.ToString("yyyy-MM-dd")" onchange="this.form.submit()">
+    </form>
+</div>
+
 <div class="item-table">
-            <table>
-                <thead>
-                    <tr>
-                        <th>SKU</th>
-                        <th>Quantity</th>
-                        <th>Date Added</th>
-                        <th>Location</th>
-                    </tr>
-                </thead>
-                <tbody id="exportTableBody">
-                    <!-- Filtered table rows will be dynamically added here -->
-                </tbody>
-            </table>
-        </div>
-        <div id="exportModal" class="modal">
-            <div class="modal-content">
-                <span class="close-button" onclick="closeModal()">&times;</span>
-                <h2>Export Options</h2>
-                <p>Select an option to export your data:</p>
-                <button class="action-button" onclick="downloadCSV()">Download as CSV</button>
-            </div>
-        </div>
+    <table>
+        <thead>
+            <tr>
+                <th>SKU</th>
+                <th>Quantity</th>
+                <th>Date Added</th>
+                <th>Location</th>
+            </tr>
+        </thead>
+        <tbody id="exportTableBody">
+            @foreach (var item in Model.ExportData)
+            {
+                <tr>
+                    <td>@item.Sku</td>
+                    <td>@item.Quantity</td>
+                    <td>@item.DateAdded.ToString("yyyy-MM-dd")</td>
+                    <td>@item.Location</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<div id="exportModal" class="modal">
+    <div class="modal-content">
+        <span class="close-button" onclick="closeModal()">&times;</span>
+        <h2>Export Options</h2>
+        <p>Select an option to export your data:</p>
+        <button class="action-button" onclick="downloadCSV()">Download as CSV</button>
+    </div>
+</div>

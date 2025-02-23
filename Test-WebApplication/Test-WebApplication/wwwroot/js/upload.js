@@ -241,5 +241,3 @@ function removeLastScanned() {
         console.log("No last scanned SKU to remove.");
     }
 }
-
-

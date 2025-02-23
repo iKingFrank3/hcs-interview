@@ -41,3 +41,4 @@
 /Users/KingFrank/Desktop/test practice/Test-WebApplication/Test-WebApplication/obj/Debug/netcoreapp3.1/Razor/Pages/Export.cshtml.g.cs
 /Users/KingFrank/Desktop/test practice/Test-WebApplication/Test-WebApplication/obj/Debug/netcoreapp3.1/Razor/Pages/Settings.cshtml.g.cs
 /Users/KingFrank/Desktop/test practice/Test-WebApplication/Test-WebApplication/obj/Debug/netcoreapp3.1/Razor/Pages/Upload.cshtml.g.cs
+/Users/KingFrank/Desktop/test practice/Test-WebApplication/Test-WebApplication/obj/Debug/netcoreapp3.1/Test-WebApplication.sourcelink.json

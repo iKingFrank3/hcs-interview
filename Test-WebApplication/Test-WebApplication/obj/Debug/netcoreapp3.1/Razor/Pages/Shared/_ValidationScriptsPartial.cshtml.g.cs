@@ -21,7 +21,7 @@ using Test_WebApplication
     #line default
     #line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"Sha256", @"9ef82fee87759dfecf2638af263085e669aa14a40c723d556d790d65a525ba11", @"/Pages/Shared/_ValidationScriptsPartial.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"Sha256", @"e61c25f75cda3f798fddba4acdd1d717ce236a7e8bbe128df0db4c8e886c3406", @"/Pages/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"Sha256", @"55f697c389949d51fed7b2d4a017ef51c2484ff2cd61aaaa87794ffec578315b", @"/Pages/_ViewImports.cshtml")]
     #nullable restore
     internal sealed class Pages_Shared__ValidationScriptsPartial : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     #nullable disable

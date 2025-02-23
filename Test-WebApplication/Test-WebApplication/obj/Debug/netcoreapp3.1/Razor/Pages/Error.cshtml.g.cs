@@ -21,7 +21,7 @@ using Test_WebApplication
     #line default
     #line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"Sha256", @"bc66171ba9f1ca97b94262a5d79faf33d0f7eb4fe7f8c83d2f58010b95893606", @"/Pages/Error.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"Sha256", @"e61c25f75cda3f798fddba4acdd1d717ce236a7e8bbe128df0db4c8e886c3406", @"/Pages/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"Sha256", @"55f697c389949d51fed7b2d4a017ef51c2484ff2cd61aaaa87794ffec578315b", @"/Pages/_ViewImports.cshtml")]
     #nullable restore
     internal sealed class Pages_Error : global::Microsoft.AspNetCore.Mvc.RazorPages.Page
     #nullable disable

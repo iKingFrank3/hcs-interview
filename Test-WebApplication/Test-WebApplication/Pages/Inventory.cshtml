@@ -6,6 +6,11 @@
 
 <!-- Any specific content for the dashboard can go here -->
 <div class="item-table">
+    <form method="get">
+        <div class="actions">
+            <input type="date" id="datePicker" name="selectedDate" class="line-dropdown" placeholder="Select a date" value="@Model.SelectedDate?.ToString("yyyy-MM-dd")" onchange="this.form.submit()">
+        </div>
+    </form>
     <table>
         <thead>
             <tr>
@@ -16,7 +21,15 @@
             </tr>
         </thead>
         <tbody id="exportTableBody">
-            <!-- Filtered table rows will be dynamically added here -->
+            @foreach (var item in Model.MockData)
+            {
+                <tr>
+                    <td>@item.Sku</td>
+                    <td>@item.Quantity</td>
+                    <td>@item.DateAdded.ToString("yyyy-MM-dd")</td>
+                    <td>@item.Location</td>
+                </tr>
+            }
         </tbody>
     </table>
 </div>

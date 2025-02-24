@@ -14,17 +14,6 @@ function downloadCSV() {
 
     let csvContent = 'SKU,Quantity,Date Added,Location\n'; // Header row
 
-    for (let i = 0; i < rows.length; i++) {
-        const cells = rows[i].getElementsByTagName('td');
-        const row = [
-            cells[0].textContent,
-            cells[1].textContent,
-            cells[2].textContent,
-            cells[3].textContent
-        ].join(',');
-        csvContent += row + '\n';
-    }
-
     const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');

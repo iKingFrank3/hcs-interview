@@ -15,6 +15,12 @@
             <label for="password">Password:</label>
             <input asp-for="Password" class="line-input" placeholder="Enter new password">
         </div>
+
+        @if (Model.SaveMessage != null)
+        {
+            <div class="save-message">@Model.SaveMessage</div>
+        }
+
         <div class="setting-buttons">
             <button type="submit" class="action-button">Save Changes</button>
             <br>
@@ -22,9 +28,4 @@
         </div>
     </div>
 </form>
-
-@if (Model.SaveMessage != null)
-{
-    <div class="save-message">@Model.SaveMessage</div>
-}
         

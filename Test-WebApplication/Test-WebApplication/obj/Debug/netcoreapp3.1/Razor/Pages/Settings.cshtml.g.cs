@@ -50,7 +50,7 @@ using Test_WebApplication
                 <input type=""password"" id=""password"" class=""line-input"" placeholder=""Enter new password"">
             </div>
             <div class=""setting-buttons"">
-                <button class=""action-button"" onclick=""saveSettings()"">Save Changes</button>
+                <button class=""action-button"" type=""submit"">Save Changes</button>
                 <br>
                 <button class=""action-button"" onclick=""logout()"">Logout</button>
             </div>

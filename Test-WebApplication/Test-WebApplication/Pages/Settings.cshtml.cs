@@ -5,14 +5,22 @@ namespace Test_WebApplication.Pages
     public class SettingsModel : PageModel
     {
         [BindProperty]
-        public string username { get; set; }
+        public string Username { get; set; }
 
         [BindProperty]
-        public string password { get; set; }
+        public string Password { get; set; }
+
+        public string SaveMessage { get; set; }
+
         public void OnGet() 
         {
-            username = "admin";
-            password = "admin";
+            Username = "admin";
+            Password = "admin";
+        }
+
+        public void OnPost()
+        {
+            SaveMessage = "Settings saved successfully!";
         }
     }
 }

@@ -9,16 +9,16 @@
     <div class="settings-content">
         <div class="setting-item">
             <label for="username">Username:</label>
-            <input type="text" id="username" name="username" class="line-input" placeholder="Enter new username" value="@Model.Username">
+            <input asp-for="Username" class="line-input" placeholder="Enter new username" value="@Model.Username">
         </div>
         <div class="setting-item">
             <label for="password">Password:</label>
-            <input type="password" id="password" name="password" class="line-input" placeholder="Enter new password">
+            <input asp-for="Password" class="line-input" placeholder="Enter new password">
         </div>
         <div class="setting-buttons">
             <button type="submit" class="action-button">Save Changes</button>
             <br>
-            <button class="action-button" onclick="logout()">Logout</button>
+            <button class="action-button">Logout</button>
         </div>
     </div>
 </form>

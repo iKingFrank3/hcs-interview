@@ -48,7 +48,7 @@
                         <h1>Export</h1>
                         <button class="action-button" onclick="exportToSpreadsheet()">Export to Spreadsheet</button>
                     }
-                    @if (ViewData["Title"] == "Settings")
+                    @if (ViewData["Title"]?.ToString() == "Settings")
                     {
                         <h1>Settings</h1>
                     }
